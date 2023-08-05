@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px #092D46;
+          box-shadow: inset 0 0 2px #092D46;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #092D46;
+  border-radius: 2px;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.burger__close, .nev__contact {
+  display: none;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  gap: 40px;
+  -webkit-box-flex: 0.5;
+      -ms-flex-positive: 0.5;
+          flex-grow: 0.5;
+}
+.nav .nav__li, .nav .nav__li a {
+  color: #092D46;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+}
+.nav .nav__dropdown span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.nav .nav__dropdown:hover .nav__dropdown__menu {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.nav .nav__dropdown:hover img {
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+}
+.nav .nav__dropdown__menu {
+  position: absolute;
+  top: 100%;
+  list-style-type: none;
+  background: rgb(158, 158, 158);
+  border-radius: 5px;
+  min-width: 170px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.nav .nav__dropdown__menu a {
+  color: #3F4352;
+  width: 100%;
+  padding: 5px;
+}
+.nav .nav__dropdown__menu li:first-child {
+  padding-top: 10px;
+}
+.nav .nav__dropdown__menu li:last-child {
+  padding-bottom: 10px;
+}
+
+.demo button {
+  border-radius: 15px;
+  background: #092D46;
+  padding: 20px 25px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  border: none;
+  outline: none;
+}
+
+.menu__btn {
+  display: none;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  border: none;
+  background: url(../../assets/image/hero/fillSketch.png);
+}
+.menu__btn img {
+  width: 32px;
+  height: 32px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.navbar__close {
+  width: 0;
+  height: 0;
+  position: fixed;
+  background: rgba(45, 45, 45, 0.9);
+  opacity: 0;
+  -webkit-transition: 0.3s linear opacity;
+  transition: 0.3s linear opacity;
+  z-index: 99;
+  top: 0;
+  left: 0;
+}
+
+.navbar__mobile {
+  background: #929292;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  height: 96px;
+  z-index: 98;
+}
+
+.mobile__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.phone__btn img {
+  background: #E40E41;
+}
+
+.burger__close img, .burger__btn img {
+  background: #092D46;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 360px;
+    height: 100vh;
+    gap: 40px;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+    padding: 28px 20px;
+    background: white;
+  }
+  .navbar__show {
+    right: 0;
+  }
+  .navbar__close__show {
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+  .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .menu__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .nav .nav__dropdown {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .nav .nav__dropdown:hover .nav__dropdown__menu {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .nav .nav__dropdown:hover img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .nav .nav__dropdown__menu {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    position: relative;
+    top: 0;
+    height: 0;
+    -webkit-transition: 0.3s linear height;
+    transition: 0.3s linear height;
+  }
+  .demo button {
+    width: 320px;
+  }
+  .navbar__mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
