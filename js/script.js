@@ -1,12 +1,25 @@
 // Dropdown
-const dropdown = document.querySelector(".nav__dropdown")
+const dropdown = document.querySelectorAll(".nav__dropdown")
+const dropdownOpen = document.querySelectorAll(".nav__dropdown__open")
 const dropdownMenu = document.querySelectorAll(".nav__dropdown__menu")
-const dropdownItems = document.querySelectorAll(".nav__dropdown__menu li")
-console.log(dropdownItems[0].clientHeight * dropdownItems.length)
 
-dropdown.onclick = () =>{
-  dropdown.classList.toggle("nav__dropdown__show")
-  dropdownMenu.style = `--h:dropdownItems[0].clientHeight * dropdownItems.length`
+for (let d = 0; d < dropdownMenu.length; d++) {
+  dropdownUse(dropdownMenu[d], dropdownMenu[d].children)
+}
+for (let i = 0; i < dropdown.length; i++) {
+  dropdownOpen[i].onclick = () =>{
+    dropdown[i].classList.toggle("nav__dropdown__show")
+  }
+}
+function dropdownUse(dropdownMenu, dropdownItems) {
+  let drHeight = []
+
+  for (let i = 0; i < dropdownItems.length; i++) {
+    drHeight.push(dropdownItems[i].clientHeight)
+  }
+  let result = drHeight.reduce((sum, current) => sum + current)
+
+  dropdownMenu.style = `--h: ${result}px;`
 }
 
 // Navbar
@@ -25,7 +38,11 @@ navClose.onclick = BurgerClose
 
 function BurgerClose() {
   nav.classList.remove("navbar__show")
+  // dropdown.classList.remove("nav__dropdown__show")
   navClose.style = "opacity: 0;"
+  for (let i = 0; i < dropdown.length; i++) {
+    dropdown[i].classList.remove("nav__dropdown__show")
+  }
   setTimeout(() => {
     navClose.classList.remove("navbar__close__show")
   }, 300);

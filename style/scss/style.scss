@@ -29,6 +29,10 @@ a{
 button{
   cursor: pointer;
 }
+.rtl__on{
+  direction: rtl;
+  unicode-bidi: embed
+}
 
 @import "./navbar";
 @import "./home";

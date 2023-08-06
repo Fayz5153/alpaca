@@ -7,7 +7,8 @@
   <title>Alpaca</title>
   <link rel="stylesheet" href="./style/css/style.css">
 </head>
-<body>
+<!--bodyni classiga " rtl__on " qoshiladi-->
+<body class="">
   <!-- Navbar Start -->
   <div class="continer">
     <!-- Navbar Mobile Start-->
@@ -34,12 +35,19 @@
         </button>
       </div>
       <ul class="nav">
-        <li class="nav__li ">
-          Пользователи
-          <img src="./assets/image/arrows/arrow_bottom.png" alt="">
+        <li class="nav__li nav__dropdown">
+          <span class="nav__dropdown__open">
+            Пользователи
+            <img src="./assets/image/arrows/arrow_bottom.png" alt="">
+          </span>
+          <ul class="nav__dropdown__menu">
+            <li><a href="#">Частная практика</a></li>
+            <li><a href="#">Outpatient clinic</a></li>
+            <li><a href="#">Chain of clinics</a></li>
+          </ul>
         </li>
         <li class="nav__li nav__dropdown">
-          <span>
+          <span class="nav__dropdown__open">
             Клиники
             <img src="./assets/image/arrows/arrow_bottom.png" alt="">
           </span>
