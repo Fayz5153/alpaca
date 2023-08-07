@@ -662,7 +662,7 @@ button {
   overflow: hidden;
   position: relative;
   width: 100%;
-  --animationspeed: 20s;
+  --animationspeed: 30s;
   --animationdelay: calc(var(--animationspeed) / 2);
 }
 
@@ -847,8 +847,209 @@ button {
   line-height: 30px;
 }
 
+.for__card__container {
+  padding: 0 280px;
+}
+
+.for__card {
+  padding: 60px 80px;
+}
+
+.for1 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-areas: "f1 f3" "f2 f3";
+  gap: 0 120px;
+  margin-top: 60px;
+  border-radius: 30px;
+  background: #EAF3F9;
+}
+
+.for1__left_img, .for2__right_img {
+  grid-area: f2;
+}
+.for1__left_img img, .for2__right_img img {
+  width: 100%;
+}
+
+.for2 {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0 120px;
+  margin-top: 60px;
+  border-radius: 30px;
+  border: 2px solid #FFF5F5;
+  background: #FFF;
+  grid-template-areas: "f3 f1" "f3 f2";
+}
+
+.for__title {
+  color: var(--black, #1F2128);
+  font-family: Manrope;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -0.36px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.for__subtitle {
+  color: var(--black, #1F2128);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-bottom: 30px;
+}
+
+.for1__btn, .for2__btn {
+  border-radius: 15px;
+  color: var(--white, #FFF);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 141px;
+  height: 58px;
+  position: relative;
+}
+.for1__btn::before, .for2__btn::before {
+  position: absolute;
+  left: -28px;
+  bottom: 0;
+}
+.for1__btn::after, .for2__btn::after {
+  position: absolute;
+  right: -42px;
+  top: 0;
+}
+
+.for1__btn {
+  background: var(--primary-blue, #092D46);
+}
+.for1__btn::before {
+  content: url(../../assets/image/stars/star1.png);
+}
+.for1__btn::after {
+  content: url(../../assets/image/stars/star2.png);
+}
+
+.for2__btn {
+  background: var(--primary-red, #E40E41);
+}
+.for2__btn::before {
+  content: url(../../assets/image/stars/star3.png);
+}
+.for2__btn::after {
+  content: url(../../assets/image/stars/star4.png);
+}
+
+.for1__left, .for2__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  grid-area: f1;
+}
+
+.for1__right, .for2__left {
+  border-radius: 15px;
+  background: var(--white, #FFF);
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  width: 477px;
+  grid-area: f3;
+}
+.for1__right .fc__text_b, .for1__right .fc__text_p, .for2__left .fc__text_b, .for2__left .fc__text_p {
+  color: var(--black, #1F2128);
+  font-family: Inter;
+  font-style: normal;
+}
+.for1__right .fc__text_b, .for2__left .fc__text_b {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+.for1__right .fc__text_p, .for2__left .fc__text_p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.for2__left {
+  background: var(--background, #FFF5F5);
+}
+
+.for__one {
+  margin-top: 150px;
+}
+
+.f1::before {
+  content: url(../../assets/image/arrows/line4.png);
+  position: absolute;
+  bottom: -100%;
+  left: -30px;
+}
+
+.f2::before {
+  content: url(../../assets/image/arrows/line2.png);
+  position: absolute;
+  bottom: -80%;
+}
+
+.f3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.f3::before {
+  content: url(../../assets/image/arrows/line5.png);
+  position: absolute;
+  -webkit-transform: translateX(7px);
+          transform: translateX(7px);
+}
+
+.f4::before {
+  content: url(../../assets/image/arrows/line3.png);
+  position: absolute;
+  bottom: -50%;
+}
+
 @media (max-width: 1680px) {
-  .filasofiya {
+  .filasofiya, .for__card__container {
     padding: 0 180px;
   }
 }
@@ -876,8 +1077,17 @@ button {
     -webkit-transform: rotate(-45deg) translateX(-30%);
             transform: rotate(-45deg) translateX(-30%);
   }
-  .filasofiya {
+  .filasofiya, .for__card__container {
     padding: 0 100px;
+  }
+  .for1, .for2 {
+    gap: 0 70px;
+  }
+  .for__card {
+    padding: 40px 60px;
+  }
+  .for1__right, .for2__left {
+    width: 450px;
   }
 }
 @media (max-width: 1200px) {
@@ -889,6 +1099,14 @@ button {
   }
   .hero__img {
     width: 280px;
+  }
+  .for1, .for2 {
+    gap: 0 50px;
+  }
+  .for1__right, .for2__left {
+    width: 400px;
+    padding: 30px;
+    gap: 20px;
   }
 }
 @media (max-width: 1024px) {
@@ -920,7 +1138,7 @@ button {
   .projects {
     height: 400px;
   }
-  .filasofiya {
+  .filasofiya, .for__card__container {
     padding: 0;
   }
   .filasofiya__items {
@@ -979,6 +1197,28 @@ button {
     background-position: right;
     -webkit-transform: rotate(1deg);
             transform: rotate(1deg);
+  }
+  .for1, .for2 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "f1" "f3" "f2";
+    gap: 30px;
+    overflow: hidden;
+  }
+  .for__card {
+    padding: 40px;
+  }
+  .for1__btn, .for2__btn {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .for1__right, .for2__left {
+    width: 100%;
+  }
+  .for__one {
+    margin-top: 80px;
+  }
+  .for1__left_img, .for2__right_img {
+    margin-top: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -1045,6 +1285,42 @@ button {
   }
   .f__item p {
     max-width: 100%;
+  }
+  .for__card {
+    padding: 20px 0;
+  }
+  .for__title {
+    font-size: 26px;
+    line-height: 50px;
+    letter-spacing: -0.36px;
+    margin-bottom: 20px;
+  }
+  .for__subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  .for1__btn, .for2__btn {
+    margin-bottom: 20px;
+  }
+  .for1__btn::before, .for2__btn::before {
+    left: -15px;
+  }
+  .for1__btn::after, .for2__btn::after {
+    right: -18px;
+  }
+  .for2__right, .for1__left {
+    padding: 0 20px;
+  }
+  .for1__right .fc__text_p, .for2__left .fc__text_p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .for1, .for2 {
+    margin-top: 30px;
+  }
+  .for__one {
+    margin-top: 60px;
   }
 }
 @media (max-width: 500px) {
