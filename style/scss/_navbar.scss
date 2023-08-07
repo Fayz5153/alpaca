@@ -137,9 +137,13 @@
   z-index: 98;
   position: fixed;
   backdrop-filter: blur(8px);
+  transition: 0.3s linear background;
   .logo__mobile, .mobile__btns{
     display: none;
   }
+}
+.navbar__scrolled{
+  background: rgba(255, 255, 255, 0.6); 
 }
 .mobile__btns{
   display: flex;

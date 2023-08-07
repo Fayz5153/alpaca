@@ -47,3 +47,31 @@ function BurgerClose() {
     navClose.classList.remove("navbar__close__show")
   }, 300);
 }
+
+// Scroll
+let last_known_scroll_position = 0;
+let ticking = false;
+
+const navbar__mobile = document.querySelector(".navbar__mobile")
+
+function doSomething(scroll_pos) {
+  console.log(scroll_pos)
+  if (scroll_pos > 100) {
+    navbar__mobile.classList.add("navbar__scrolled")
+  } else {
+    navbar__mobile.classList.remove("navbar__scrolled")
+  }
+}
+
+window.addEventListener('scroll', function(e) {
+  last_known_scroll_position = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      doSomething(last_known_scroll_position);
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});

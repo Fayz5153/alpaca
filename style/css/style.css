@@ -9,6 +9,7 @@
 html {
   scroll-behavior: smooth;
   min-height: 200vh;
+  padding-bottom: 300px;
 }
 
 body::-webkit-scrollbar {
@@ -214,9 +215,15 @@ button {
   position: fixed;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
+  -webkit-transition: 0.3s linear background;
+  transition: 0.3s linear background;
 }
 .navbar__mobile .logo__mobile, .navbar__mobile .mobile__btns {
   display: none;
+}
+
+.navbar__scrolled {
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .mobile__btns {
@@ -759,6 +766,8 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 150px;
+  width: 100%;
+  padding: 0 280px;
 }
 .filasofiya__title {
   color: var(--black, #1F2128);
@@ -792,6 +801,15 @@ button {
   background: var(--primary-blue, #092D46);
   padding: 20px 25px;
   margin-bottom: 40px;
+  position: relative;
+}
+.filasofiya__btn::before {
+  content: url(../../assets/image/arrows/arrow1.png);
+  position: absolute;
+  left: calc(-100% - 20px);
+  top: -50%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
 }
 
 .filasofiya__items {
@@ -802,6 +820,7 @@ button {
   padding: 60px 80px 50px 80px;
   border-radius: 30px;
   border: 2px solid #EAF3F9;
+  width: 100%;
 }
 
 .f__item {
@@ -828,6 +847,11 @@ button {
   line-height: 30px;
 }
 
+@media (max-width: 1680px) {
+  .filasofiya {
+    padding: 0 180px;
+  }
+}
 @media (max-width: 1440px) {
   .hero {
     gap: 100px;
@@ -851,6 +875,9 @@ button {
   .project__carusel {
     -webkit-transform: rotate(-45deg) translateX(-30%);
             transform: rotate(-45deg) translateX(-30%);
+  }
+  .filasofiya {
+    padding: 0 100px;
   }
 }
 @media (max-width: 1200px) {
@@ -892,6 +919,13 @@ button {
   }
   .projects {
     height: 400px;
+  }
+  .filasofiya {
+    padding: 0;
+  }
+  .filasofiya__items {
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
   }
 }
 @media (max-width: 940px) {
@@ -957,6 +991,60 @@ button {
   }
   .brand-slide.delay {
     padding-top: 20px;
+  }
+  .filasofiya {
+    margin-top: 80px;
+  }
+  .filasofiya__subtitle {
+    max-width: 80%;
+  }
+  .filasofiya__btn {
+    width: calc(100% - 60px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px 0;
+  }
+  .filasofiya__btn::before {
+    left: -90px;
+    top: -160px;
+    -webkit-transform: rotate(82deg);
+            transform: rotate(82deg);
+  }
+}
+@media (max-width: 515px) {
+  .filasofiya__items {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 20px;
+    width: 100%;
+  }
+  .filasofiya {
+    margin-top: 60px;
+  }
+  .filasofiya__title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .filasofiya__subtitle {
+    max-width: 90%;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .filasofiya__btn {
+    margin-bottom: 30px;
+  }
+  .filasofiya__btn::before {
+    display: none;
+  }
+  .f__item p {
+    max-width: 100%;
   }
 }
 @media (max-width: 500px) {
