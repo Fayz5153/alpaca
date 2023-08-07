@@ -1,13 +1,20 @@
+.navbar__fixed{
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
 .navbar{
   padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  // position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   z-index: 100;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 .burger__close, .nev__contact{
   display: none;
@@ -119,13 +126,20 @@
   left: 0;
 }
 .navbar__mobile{
-  background: #929292;
+  // background: #929292;
   display: none;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
   height: 96px;
+  width: 100%;
   z-index: 98;
+  position: fixed;
+  backdrop-filter: blur(8px);
+  .logo__mobile, .mobile__btns{
+    display: none;
+  }
 }
 .mobile__btns{
   display: flex;
@@ -145,6 +159,7 @@
 
 @media (max-width:1024px) {
   .navbar{
+    position: fixed;
     flex-direction: column;
     justify-content: flex-start;
     width: 360px;
@@ -239,6 +254,9 @@
   }
   .navbar__mobile{
     display: flex;
+    .logo__mobile, .mobile__btns{
+      display: flex;
+    }
   }
   .nev__contact{
     display: flex;
@@ -277,6 +295,12 @@
       left: 0 !important;
       right: auto !important;
     }
+  }
+}
+@media (max-width:940px) {
+  .navbar__mobile{
+    height: 76px;
+    padding: 0 20px;
   }
 }
 @media (max-width:425px) {
