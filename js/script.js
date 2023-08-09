@@ -55,7 +55,7 @@ let ticking = false;
 const navbar__mobile = document.querySelector(".navbar__mobile")
 
 function doSomething(scroll_pos) {
-  console.log(scroll_pos)
+  // console.log(scroll_pos)
   if (scroll_pos > 100) {
     navbar__mobile.classList.add("navbar__scrolled")
   } else {

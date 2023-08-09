@@ -2,6 +2,8 @@
   position: fixed;
   z-index: 100;
   width: 100%;
+  top: 0;
+  left: 0;
 }
 .navbar{
   padding: 20px 40px;
@@ -15,6 +17,11 @@
   z-index: 100;
   max-width: 1920px;
   margin: 0 auto;
+}
+#other__pages{
+  .navbar__mobile{
+    border-bottom: 2px solid #EAF3F9;
+  }
 }
 .burger__close, .nev__contact{
   display: none;
@@ -37,6 +44,11 @@
     // gap: 5px;
     cursor: pointer;
     position: relative;
+  }
+  .nav__li{
+    a:hover{
+      background: #EAF3F9;
+    }
   }
   .nav__dropdown{
     span{
@@ -136,6 +148,7 @@
   width: 100%;
   z-index: 98;
   position: fixed;
+  top: 0;
   backdrop-filter: blur(8px);
   transition: 0.3s linear background;
   .logo__mobile, .mobile__btns{
@@ -143,7 +156,8 @@
   }
 }
 .navbar__scrolled{
-  background: rgba(255, 255, 255, 0.6); 
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 0px !important;
 }
 .mobile__btns{
   display: flex;
