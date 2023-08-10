@@ -2268,6 +2268,157 @@ button {
   text-decoration: underline;
 }
 
+.price__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 100px;
+}
+
+.price {
+  display: grid;
+  grid-template-columns: 373px 373px 373px;
+  gap: 40px;
+}
+.price__card {
+  border-radius: 30px;
+  border: 2px solid #EAF3F9;
+  background: var(--white, #FFF);
+  padding: 30px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+.price__card:hover {
+  background: #EAF3F9;
+}
+.price__card:hover .price__btn {
+  background: var(--primary-red, #E40E41);
+  color: #FFF;
+}
+.price__card:hover .price__btn::after, .price__card:hover .price__btn::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.price__title {
+  color: var(--black, #1F2128);
+  font-family: Manrope;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -0.36px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.price__item {
+  color: var(--black, #1F2128);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-bottom: 15px;
+  padding-left: 32px;
+  position: relative;
+}
+.price__item::before {
+  content: "";
+  background: url(../../assets/image/arrows/check.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+}
+.price .price_no {
+  color: rgba(31, 33, 40, 0.7);
+}
+.price .price_no::before {
+  background: url(../../assets/image/arrows/close.svg) !important;
+}
+.price__money {
+  color: var(--black, #1F2128);
+  font-family: Manrope;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: -0.36px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.price__money span {
+  color: var(--grey-text, #3F4352);
+  font-family: Inter;
+  font-size: 20px;
+  line-height: 30px;
+}
+.price__btn {
+  color: var(--black, #1F2128);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  border-radius: 15px;
+  background: #EAF3F9;
+  height: 58px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+.price__btn::after, .price__btn::before {
+  position: absolute;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.price__btn::after {
+  content: "";
+  background: url(../../assets/image/stars/star3.png);
+  bottom: -5px;
+  left: -15px;
+  width: 15px;
+  height: 15px;
+}
+.price__btn::before {
+  content: "";
+  background: url(../../assets/image/stars/star4.png);
+  right: -28px;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+}
+
 @media (max-width: 1680px) {
   #other__pages .comments__container, #other__pages .partnyors__container, #other__pages .use__now {
     margin: 100px 180px 0 180px;
@@ -2288,6 +2439,64 @@ button {
   }
   .contact {
     margin: 100px 100px 0 100px;
+  }
+  .price__container {
+    margin: 100px 100px 0 100px;
+  }
+  .price {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media (max-width: 1285px) {
+  .contact {
+    grid-template-columns: auto 400px;
+    gap: 50px;
+    padding: 40px;
+  }
+  .contact__form {
+    width: 100%;
+  }
+}
+@media (max-width: 1100px) {
+  .price {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .price__card {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .price__card::before {
+    content: "";
+    width: 100%;
+    height: 205px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(22.7%, #fff));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 22.7%);
+    z-index: 1;
+  }
+  .price__card:hover::before {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(22.7%, #EAF3F9));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #EAF3F9 22.7%);
+  }
+  .price__list {
+    height: 275px;
+    padding-bottom: 40px;
+    overflow-y: scroll;
+    position: relative;
+  }
+  .price__money {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+  }
+  .price__btn {
+    position: relative;
+    z-index: 2;
   }
 }
 @media (max-width: 1024px) {
@@ -2320,6 +2529,13 @@ button {
     width: 200px;
     height: 200px;
     margin-bottom: 0;
+  }
+  .contact {
+    grid-template-columns: 1fr;
+    margin: 100px 40px 0 40px;
+  }
+  .price__container {
+    margin: 100px 40px 0 40px;
   }
 }
 @media (max-width: 940px) {
@@ -2402,6 +2618,20 @@ button {
   .inner__slider .swiper__pagination .swiper-pagination-bullet-active {
     background-color: #092D46;
   }
+  .contact {
+    margin: 80px 0 0 0;
+  }
+  .price__container {
+    margin: 80px 40px 0 40px;
+  }
+  .price__card {
+    padding: 20px;
+  }
+  .price__btn::before {
+    width: 18px;
+    height: 18px;
+    right: -18px;
+  }
 }
 @media (max-width: 565px) {
   .inner__container {
@@ -2435,8 +2665,27 @@ button {
     line-height: 24px;
     padding: 20px;
   }
+  .contact {
+    padding: 0;
+  }
+  .contact__text {
+    padding: 20px 20px 0 20px;
+  }
+  .contact__title {
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: -0.26px;
+  }
 }
 @media (max-width: 515px) {
+  .price__container {
+    margin: 60px 0 0 0;
+  }
+  .price__title {
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: -0.26px;
+  }
   .inner__for1 {
     padding: 20px 10px;
   }
