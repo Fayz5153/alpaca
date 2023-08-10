@@ -76,6 +76,7 @@ window.addEventListener('scroll', function(e) {
   }
 });
 
+const swiper1 = document.querySelector(".swiper")
 
 let btnRTL = document.createElement("button")
 btnRTL.textContent = "RTL 'off'"
@@ -83,11 +84,13 @@ btnRTL.style = "position: fixed; top:0; left:0; z-index:100000;"
 btnRTL.onclick = async = () =>{
    if (document.body.classList.contains("rtl__on")) {
     btnRTL.innerHTML = "RTL 'off'"
+    // swiper1.setAttribute("dir", "ltr")
   } else {
     btnRTL.innerHTML = "RTL 'on'"
+    // swiper1.setAttribute("dir", "rtl")
   }
   document.body.classList.toggle("rtl__on")
 }
 document.body.append(btnRTL)
 
-console.log(btnRTL)
+// console.log(btnRTL)
