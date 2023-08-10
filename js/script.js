@@ -75,3 +75,19 @@ window.addEventListener('scroll', function(e) {
     ticking = true;
   }
 });
+
+
+let btnRTL = document.createElement("button")
+btnRTL.textContent = "RTL 'off'"
+btnRTL.style = "position: fixed; top:0; left:0; z-index:100000;"
+btnRTL.onclick = async = () =>{
+   if (document.body.classList.contains("rtl__on")) {
+    btnRTL.innerHTML = "RTL 'off'"
+  } else {
+    btnRTL.innerHTML = "RTL 'on'"
+  }
+  document.body.classList.toggle("rtl__on")
+}
+document.body.append(btnRTL)
+
+console.log(btnRTL)
