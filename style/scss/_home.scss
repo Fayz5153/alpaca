@@ -3,6 +3,9 @@
   background: #FFF5F5;
   padding-top: 170px;
   padding-bottom: 150px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 .hero{
   display: flex;
@@ -111,6 +114,10 @@
       left: auto;
       right: -38px;
     }
+  }
+  .swiper-slide{
+    direction: rtl;
+    unicode-bidi: embed;
   }
 }
 .hero__img{
@@ -758,6 +765,9 @@
   }
 }
 @media (max-width:1024px) {
+  .hero__container{
+    height: auto;
+  }
   .hero__text{
     max-width: none;
     p{
