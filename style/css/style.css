@@ -272,7 +272,7 @@ button {
 }
 
 .footer {
-  padding: 60px 80px;
+  padding: 60px 80px 30px 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -358,7 +358,7 @@ button {
   }
   .footer {
     gap: 50px;
-    padding: 60px;
+    padding: 60px 60px 30px 60px;
   }
 }
 @media (max-width: 1440px) {
@@ -366,7 +366,7 @@ button {
     padding: 0 100px;
   }
   .footer {
-    padding: 60px 0;
+    padding: 60px 0 20px 0;
   }
 }
 @media (max-width: 1120px) {
@@ -560,7 +560,7 @@ button {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "fol fol fol" "fo1 fo2 fo3" "fo4 fo4 fo4";
     gap: 60px;
-    padding: 40px 0;
+    padding: 40px 0 20px 0;
   }
   .footer__logo {
     grid-area: fol;
@@ -1527,7 +1527,7 @@ button {
     line-height: 140%;
   }
   .hero__img {
-    width: 350px;
+    width: 300px;
   }
   .hero__img img {
     width: 100%;
@@ -1568,7 +1568,7 @@ button {
 }
 @media (max-width: 1280px) {
   .hero__img {
-    width: 280px;
+    width: 240px;
   }
 }
 @media (max-width: 1200px) {
